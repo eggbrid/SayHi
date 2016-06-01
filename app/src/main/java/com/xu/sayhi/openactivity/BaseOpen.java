@@ -16,15 +16,21 @@ public abstract class BaseOpen {
 
     protected abstract int setFlag();
 
-    protected abstract String setKey();
+    public abstract String setKey();
+    public abstract String getAction();
 
     protected abstract BaseToBean setBean(String json);
 
     public void toActivity(Context context, String json) {
         Intent i = new Intent(context, setActivity());
         i.setFlags(setFlag());
-        i.putExtra(setKey(),setBean(json));
-//        i.putExtra(setKey(),setBean(json));
+        i.putExtra(setKey(), setBean(json));
         context.startActivity(i);
+    }
+    public void sendMessage(Context context, String beanJson) {
+        Intent intent = new Intent();
+        intent.setAction(getAction());
+        intent.putExtra(setKey(), setBean(beanJson));
+        context.sendBroadcast(intent);
     }
 }

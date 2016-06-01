@@ -5,6 +5,7 @@ import android.widget.TextView;
 import com.xu.sayhi.R;
 import com.xu.sayhi.activity.BaseActivity;
 import com.xu.sayhi.bean.tobean.HelpToBean;
+import com.xu.sayhi.openactivity.HelperOpen;
 
 /**
  * Created by wangxu on 2016/6/1.
@@ -36,6 +37,6 @@ public class HelpActivity extends BaseActivity{
 
     @Override
     public String getOpenBean() {
-        return null;
+        return HelperOpen.Key;
     }
 }

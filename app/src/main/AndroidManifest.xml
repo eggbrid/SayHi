@@ -32,6 +32,11 @@
         <activity
             android:name=".activity.help.HelpActivity"
             android:screenOrientation="portrait"></activity>
+        <receiver android:name=".MyReceiver">
+            <intent-filter>
+                <action android:name="ELITOR_CLOCK" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
