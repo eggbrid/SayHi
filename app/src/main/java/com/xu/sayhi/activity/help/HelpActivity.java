@@ -2,6 +2,8 @@ package com.xu.sayhi.activity.help;
 
 import android.widget.TextView;
 
+import com.iflytek.cloud.SpeechError;
+import com.iflytek.cloud.UnderstanderResult;
 import com.xu.sayhi.R;
 import com.xu.sayhi.activity.BaseActivity;
 import com.xu.sayhi.bean.tobean.HelpToBean;
@@ -39,4 +41,5 @@ public class HelpActivity extends BaseActivity{
     public String getOpenBean() {
         return HelperOpen.Key;
     }
+
 }

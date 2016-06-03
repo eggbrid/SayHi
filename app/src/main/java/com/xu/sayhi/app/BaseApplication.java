@@ -2,6 +2,9 @@ package com.xu.sayhi.app;
 
 import android.app.Application;
 
+import com.iflytek.cloud.SpeechConstant;
+import com.iflytek.cloud.SpeechUtility;
+
 import cn.bmob.v3.Bmob;
 
 /**
@@ -26,5 +29,6 @@ public class BaseApplication extends Application {
         //.setFileExpiration(2500)
         //.build();
         //Bmob.initialize(config);
+        SpeechUtility.createUtility(this, SpeechConstant.APPID +"=575125db");
     }
 }

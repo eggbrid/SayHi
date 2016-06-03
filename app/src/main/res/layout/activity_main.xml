@@ -3,14 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/layout_title_bar" />
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_title_bar" />
 
-    <ListView
-        android:id="@+id/content"
+    <FrameLayout
+        android:layout_below="@+id/title_bar"
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:layout_above="@+id/bottom_layout"
-        android:scrollbars="none"></ListView>
+        android:layout_height="match_parent"
+        android:background="@color/white_gray" />
     <RelativeLayout
         android:id="@+id/bottom_layout"
         android:layout_width="match_parent"
