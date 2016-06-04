@@ -15,6 +15,7 @@ import com.iflytek.cloud.UnderstanderResult;
 import com.xu.sayhi.R;
 import com.xu.sayhi.bean.fkbean.MoreResults;
 import com.xu.sayhi.bean.response.FkResponse;
+import com.xu.sayhi.util.SpeechUtil;
 
 /**
  * Created by wangxu on 2016/6/3.
@@ -133,6 +134,7 @@ public class NomalSayCoFragment extends BaseSayCoFragment implements TextUnderst
     @Override
     public void onDestroy() {
         super.onDestroy();
+        SpeechUtil.stop();
     }
 
     public void sayCoBoring() {

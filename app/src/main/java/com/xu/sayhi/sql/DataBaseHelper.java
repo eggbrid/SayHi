@@ -4,7 +4,12 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
+import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.support.ConnectionSource;
+import com.j256.ormlite.table.TableUtils;
+import com.xu.sayhi.bean.dbbean.SayCoCharacterBean;
+
+import java.sql.SQLException;
 
 /**
  * Created by wx on 2015/12/3.
@@ -28,14 +33,13 @@ public class DataBaseHelper extends OrmLiteSqliteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource) {
-//        try {
-//            Log.e("wangxu", "onCreate");
-////            TableUtils.createTable(connectionSource, DataBaseUser.class);
-//
-//
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            TableUtils.createTable(connectionSource, SayCoCharacterBean.class);
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -43,9 +47,11 @@ public class DataBaseHelper extends OrmLiteSqliteOpenHelper {
 
     }
 
-
-//    public Dao<DataBaseUser, Integer> getDataBaseUser() throws SQLException {
-//        return getDao(DataBaseUser.class);
-//    }
+    public Dao<SayCoCharacterBean, Integer> getSayCoCharacterDao() throws SQLException {
+        return getDao(SayCoCharacterBean.class);
+    }
+    public Dao<SayCoCharacterBean, Integer> getFuncationDao() throws SQLException {
+        return getDao(SayCoCharacterBean.class);
+    }
 
 }
