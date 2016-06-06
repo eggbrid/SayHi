@@ -83,22 +83,14 @@ public class MainActivity extends BaseActivity implements OnCosayGet<HomeSayBean
         }
     }
 
-    private void getFuncation(String key) {
+    private void getFuncation() {
         BmobQuery query = new BmobQuery("Function");
-        query.addWhereContains("key", key);
         query.findObjects(this, new FindListener<Function>() {
-
             @Override
             public void onSuccess(List<Function> list) {
-                for (Function functionBean : list) {
-                    Log.e("wangxu", functionBean.getName());
-                }
             }
-
             @Override
             public void onError(int i, String s) {
-                Log.e("wangxu", "i=" + i + "s=" + s);
-
             }
         });
     }

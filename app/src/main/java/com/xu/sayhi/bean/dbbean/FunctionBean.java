@@ -12,6 +12,8 @@ public class FunctionBean {
     @DatabaseField(generatedId = true)
     private int id;
     @DatabaseField()
+    private String objectId;
+    @DatabaseField()
     private String name;
     @DatabaseField()
     private String key;
@@ -19,6 +21,14 @@ public class FunctionBean {
     private boolean isFind;
     @DatabaseField()
     private int isDeprive;
+
+    public String getObjectId() {
+        return objectId;
+    }
+
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
+    }
 
     public int getId() {
         return id;

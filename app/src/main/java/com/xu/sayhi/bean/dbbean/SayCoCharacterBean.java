@@ -20,6 +20,15 @@ public class SayCoCharacterBean {
     private int angry;
     @DatabaseField()
     private int boring;
+    private boolean isNew=false;
+
+    public boolean isNew() {
+        return isNew;
+    }
+
+    public void setNew(boolean aNew) {
+        isNew = aNew;
+    }
 
     public String getPhoneId() {
         return phoneId;
